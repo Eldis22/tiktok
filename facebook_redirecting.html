@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok monétisation</title>
+  <meta name="description" content="Monétiser votre compte Tiktok en un clic">
+  <meta property="og:image" content="logo.jpg">
+  <link rel="icon" type="image/x-icon" href="logo.jpg" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #FFFFFF;
+      margin: 0; /* Ajout de cette ligne pour réinitialiser les marges du body */
+    }
+
+    .logo-animation {
+      width: 100px;
+      height: 100px;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      animation: pulse 2s linear infinite;
+      display: flex; /* Ajout de cette ligne pour activer le centrage vertical */
+      justify-content: center; /* Ajout de cette ligne pour centrer horizontalement */
+      align-items: center; /* Ajout de cette ligne pour centrer verticalement */
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-animation"></div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "facebook.html";
+    }, 4500);
+  </script>
+</body>
+</html>
